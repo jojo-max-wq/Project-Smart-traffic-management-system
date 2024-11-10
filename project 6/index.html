@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container" id="loginForm">
+            <h2>Traffic Management System</h2>
+            <form onsubmit="handleLogin(event)">
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <div class="role-select">
+                    <select id="userRole">
+                        <option value="admin">Admin</option>
+                        <option value="operator">Operator</option>
+                        <option value="public">Public User</option>
+                    </select>
+                </div>
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="#" onclick="toggleForms()">Sign Up</a></p>
+            </form>
+        </div>
+
+        <div class="form-container hidden" id="signupForm">
+            <h2>Create Account</h2>
+            <form onsubmit="handleSignup(event)">
+                <div class="input-group">
+                    <input type="text" id="newUsername" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="newPassword" placeholder="Password" required>
+                </div>
+                <div class="role-select">
+                    <select id="newUserRole">
+                        <option value="public">Public User</option>
+                        <option value="operator">Operator</option>
+                    </select>
+                </div>
+                <button type="submit">Sign Up</button>
+                <p>Already have an account? <a href="#" onclick="toggleForms()">Login</a></p>
+            </form>
+        </div>
+
+        <!-- Dashboard containers -->
+        <div id="adminDashboard" class="dashboard hidden">
+            <h2>Admin Dashboard</h2>
+            <div class="dashboard-content">
+                <div class="menu-section">
+                    <button onclick="showSection('sensorConfig')">Sensor Configuration</button>
+                    <button onclick="showSection('trafficRules')">Traffic Rules</button>
+                    <button onclick="showSection('systemControl')">System Control</button>
+                </div>
+                <div id="dashboardContent" class="content-section">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <div id="operatorDashboard" class="dashboard hidden">
+            <h2>Operator Dashboard</h2>
+            <div class="dashboard-content">
+                <div class="menu-section">
+                    <button onclick="showSection('monitoring')">Traffic Monitoring</button>
+                    <button onclick="showSection('configuration')">Signal Configuration</button>
+                    <button onclick="showSection('reports')">Reports</button>
+                </div>
+                <div id="operatorContent" class="content-section">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <div id="publicDashboard" class="dashboard hidden">
+            <h2>Public User Dashboard</h2>
+            <div class="dashboard-content">
+                <div class="menu-section">
+                    <button onclick="showSection('trafficUpdates')">Traffic Updates</button>
+                    <button onclick="showSection('reportIssue')">Report Issue</button>
+                </div>
+                <div id="publicContent" class="content-section">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+:root {
+    --primary-color: #2196F3;
+    --secondary-color: #1976D2;
+    --background-color: #f5f5f5;
+    --text-color: #333;
+    --error-color: #f44336;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.dashboard-content {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-section {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content-section {
+    flex: 1;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    min-height: 400px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.role-select {
+    margin-bottom: 20px;
+}
+
+select {
+    background-color: white;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .dashboard-content {
+        flex-direction: column;
+    }
+
+    .menu-section {
+        width: 100%;
+    }
+
+    .content-section {
+        min-height: 300px;
+    }
+}
