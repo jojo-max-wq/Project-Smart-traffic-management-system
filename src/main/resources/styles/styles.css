@@ -1,0 +1,55 @@
+/* Custom styles for web components */
+.dashboard-container {
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.status-box {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.chart-container {
+    height: 400px;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.control-panel {
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.alert {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
